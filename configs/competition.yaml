@@ -1,0 +1,61 @@
+# CompeteML Competition Configuration
+# Optimized for winning competitions (2 hours, maximum performance)
+
+# System Settings
+mode: auto
+time_limit: 7200  # 2 hours
+quick_test: false
+random_seed: 42
+verbose: 2
+n_jobs: -1
+
+# Data Settings
+train_path: null
+test_path: null
+target_column: null
+id_column: null
+problem_type: null
+
+# EDA Settings
+run_eda: true
+generate_profile: false  # Skip for speed
+eda_visualizations: false  # Skip for speed
+
+# Preprocessing Settings
+handle_missing: true
+handle_outliers: true
+scaling_strategy: auto
+encoding_strategy: auto
+
+# Feature Engineering Settings (CRITICAL FOR WINNING)
+auto_features: true
+interaction_features: true  # Creates winning features
+polynomial_features: true  # Enable for competition
+time_features: true
+text_features: true
+feature_selection: true
+max_features: null  # Create all useful features
+apply_competition_tricks: true  # Target encoding, frequency encoding (WINS!)
+
+# Modeling Settings (BEST QUALITY)
+automl_framework: autogluon
+
+# AutoGluon Settings - Maximize Performance
+ag_preset: best_quality  # Best models for competition
+ag_num_bag_folds: 8  # More bagging = better performance
+ag_num_stack_levels: 2  # More stacking = better performance
+ensemble: true
+
+# Cross-validation
+cv_folds: 5
+
+# Evaluation
+eval_metric: null
+
+# Output Settings
+output_dir: outputs
+save_predictions: true
+save_models: true
+generate_report: true
+generate_recipe: true
+generate_submission: true  # CRITICAL - create submission CSV

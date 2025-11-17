@@ -1,0 +1,60 @@
+# CompeteML Quick Test Configuration
+# Fast 5-minute test to verify system works
+
+# System Settings
+mode: auto
+time_limit: 300  # 5 minutes
+quick_test: true
+random_seed: 42
+verbose: 1  # Less verbose for speed
+n_jobs: -1
+
+# Data Settings
+train_path: null
+test_path: null
+target_column: null
+id_column: null
+problem_type: null
+
+# EDA Settings (SKIP FOR SPEED)
+run_eda: false
+generate_profile: false
+eda_visualizations: false
+
+# Preprocessing Settings
+handle_missing: true
+handle_outliers: false  # Skip to save time
+scaling_strategy: auto
+encoding_strategy: auto
+
+# Feature Engineering Settings (MINIMAL)
+auto_features: false  # Skip feature engineering for speed
+interaction_features: false
+polynomial_features: false
+time_features: false
+text_features: false
+feature_selection: false
+max_features: null
+
+# Modeling Settings (FAST)
+automl_framework: autogluon
+
+# AutoGluon Settings - Speed Optimized
+ag_preset: optimize_for_deployment  # Fastest preset
+ag_num_bag_folds: 0  # No bagging for speed
+ag_num_stack_levels: 0  # No stacking for speed
+ensemble: false  # No ensemble for speed
+
+# Cross-validation
+cv_folds: 3  # Fewer folds for speed
+
+# Evaluation
+eval_metric: null
+
+# Output Settings
+output_dir: outputs
+save_predictions: true
+save_models: true
+generate_report: false  # Skip report for speed
+generate_recipe: true  # Keep recipe to verify steps
+generate_submission: true

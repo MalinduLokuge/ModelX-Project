@@ -1,0 +1,58 @@
+================================================================================
+MEMORY-OPTIMIZED MANUAL ML TRAINING
+================================================================================
+Loading data...
+✓ Train: (192644, 112), Val: (29279, 112)
+
+MODEL 1: Logistic Regression
+--------------------------------------------------------------------------------
+✓ ROC-AUC: 0.7358
+
+MODEL 2: Random Forest (Gini)
+--------------------------------------------------------------------------------
+✓ ROC-AUC: 0.7742
+
+MODEL 3: Random Forest (Entropy)
+--------------------------------------------------------------------------------
+✓ ROC-AUC: 0.7746
+
+MODEL 4: Extra Trees
+--------------------------------------------------------------------------------
+✓ ROC-AUC: 0.7548
+
+MODEL 5: XGBoost (Default)
+--------------------------------------------------------------------------------
+✓ ROC-AUC: 0.7843
+
+MODEL 6: XGBoost (AutoML-Informed)
+Using AutoML best params: lr=0.018, max_depth=10, colsample=0.69
+--------------------------------------------------------------------------------
+✓ ROC-AUC: 0.7896
+
+MODEL 7: LightGBM (Default)
+--------------------------------------------------------------------------------
+✓ ROC-AUC: 0.7882
+
+MODEL 8: LightGBM (AutoML-Informed)
+Using AutoML best params: lr~0.05-0.07, num_leaves 64-128, feature_fraction 0.9
+--------------------------------------------------------------------------------
+✓ ROC-AUC: 0.7947
+
+================================================================================
+RESULTS SUMMARY
+================================================================================
+
+Model Performance:
+--------------------------------------------------------------------------------
+LightGBM_AutoML_Tuned          | AUC: 0.7947 | Acc: 0.7587 | F1: 0.5024
+XGBoost_AutoML_Tuned           | AUC: 0.7896 | Acc: 0.7565 | F1: 0.5096
+LightGBM_Default               | AUC: 0.7882 | Acc: 0.7557 | F1: 0.4970
+XGBoost_Default                | AUC: 0.7843 | Acc: 0.7539 | F1: 0.4958
+RandomForest_Entropy           | AUC: 0.7746 | Acc: 0.7529 | F1: 0.5266
+RandomForest_Gini              | AUC: 0.7742 | Acc: 0.7536 | F1: 0.5279
+ExtraTrees                     | AUC: 0.7548 | Acc: 0.7416 | F1: 0.5506
+LogisticRegression             | AUC: 0.7358 | Acc: 0.7090 | F1: 0.5533
+Traceback (most recent call last):
+  File "C:\Users\user\PycharmProjects\MLpipeline\train_manual_lowmem.py", line 205, in <module>
+    pickle.dump(model, f)
+OSError: [Errno 28] No space left on device

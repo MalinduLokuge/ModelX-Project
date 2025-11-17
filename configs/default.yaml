@@ -1,0 +1,60 @@
+# CompeteML Default Configuration
+# Balanced settings for general use (1 hour runtime)
+
+# System Settings
+mode: auto  # auto, guided, manual
+time_limit: 3600  # 1 hour in seconds
+quick_test: false
+random_seed: 42
+verbose: 2  # 0=silent, 1=basic, 2=detailed, 3=debug
+n_jobs: -1  # -1 uses all cores
+
+# Data Settings
+train_path: null  # Set via CLI or update here
+test_path: null
+target_column: null  # Auto-detect if null
+id_column: null  # Auto-detect if null
+problem_type: null  # auto-detect, classification, regression
+
+# EDA Settings
+run_eda: true
+generate_profile: false  # Skip heavy profiling (use lightweight EDA)
+eda_visualizations: true
+
+# Preprocessing Settings
+handle_missing: true
+handle_outliers: true
+scaling_strategy: auto  # auto, standard, minmax, robust, none
+encoding_strategy: auto  # auto, onehot, target, label
+
+# Feature Engineering Settings
+auto_features: true
+interaction_features: true  # Creates multiply, divide, add features
+polynomial_features: false  # Careful - can explode features
+time_features: true
+text_features: true
+feature_selection: true  # Remove redundant features
+max_features: null  # null = no limit
+
+# Modeling Settings
+automl_framework: autogluon  # Primary framework
+
+# AutoGluon Settings
+ag_preset: medium_quality  # best_quality, high_quality, medium_quality, optimize_for_deployment
+ag_num_bag_folds: 5  # More = better but slower
+ag_num_stack_levels: 1  # Stacking layers
+ensemble: true
+
+# Cross-validation
+cv_folds: 5
+
+# Evaluation
+eval_metric: null  # Auto-select based on problem type
+
+# Output Settings
+output_dir: outputs
+save_predictions: true
+save_models: true
+generate_report: true
+generate_recipe: true  # Track what was done
+generate_submission: true  # Create competition CSV

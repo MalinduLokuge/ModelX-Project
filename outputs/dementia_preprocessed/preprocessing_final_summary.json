@@ -1,0 +1,72 @@
+{
+  "class_balance": {
+    "original_distribution": {
+      "class_0": 96322,
+      "class_1": 40311,
+      "class_0_pct": 70.5,
+      "class_1_pct": 29.5,
+      "ratio": 2.39
+    },
+    "needs_balancing": true,
+    "technique_used": "SMOTE (Synthetic Minority Over-sampling)",
+    "new_distribution": {
+      "class_0": 96322,
+      "class_1": 96322,
+      "class_0_pct": 50.0,
+      "class_1_pct": 50.0
+    },
+    "justification": "SMOTE creates synthetic samples for minority class, improving model ability to learn from imbalanced data"
+  },
+  "feature_importance": {
+    "method": "RandomForest (100 trees, max_depth=10)",
+    "top_10_features": [
+      {
+        "feature": "EVENTS",
+        "importance": 0.10039976001410057
+      },
+      {
+        "feature": "REMDATES",
+        "importance": 0.09497286085867902
+      },
+      {
+        "feature": "PAYATTN",
+        "importance": 0.08781572023167461
+      },
+      {
+        "feature": "SHOPPING",
+        "importance": 0.06685690287443262
+      },
+      {
+        "feature": "TRAVEL",
+        "importance": 0.059059404061678374
+      },
+      {
+        "feature": "BILLS",
+        "importance": 0.05215978251607017
+      },
+      {
+        "feature": "GAMES",
+        "importance": 0.05153140476427302
+      },
+      {
+        "feature": "MEALPREP",
+        "importance": 0.051071284438344466
+      },
+      {
+        "feature": "HYPERTEN",
+        "importance": 0.044113945684002384
+      },
+      {
+        "feature": "HYPERCHO",
+        "importance": 0.04116557625005776
+      }
+    ],
+    "total_features": 112
+  },
+  "model_info": {
+    "algorithm": "RandomForestClassifier",
+    "n_estimators": 100,
+    "max_depth": 10,
+    "train_samples": 192644
+  }
+}

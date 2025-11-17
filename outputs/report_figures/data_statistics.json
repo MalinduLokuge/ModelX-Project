@@ -1,0 +1,14 @@
+{
+  "total_samples": 165912,
+  "train_samples": 136633,
+  "test_samples": 29279,
+  "total_features": 112,
+  "numerical_features": 112,
+  "categorical_features": 0,
+  "missing_percentage": 40.34661985183195,
+  "class_distribution": {
+    "no_dementia": 116963,
+    "dementia": 48949,
+    "imbalance_ratio": 2.3894870170994302
+  }
+}

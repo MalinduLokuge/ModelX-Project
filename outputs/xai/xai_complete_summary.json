@@ -1,0 +1,96 @@
+{
+  "autogluon_auc": 0.9434,
+  "lightgbm_auc": 0.7981,
+  "improvement_pp": 14.53,
+  "top_20_features": [
+    {
+      "feature": "PAYATTN",
+      "shap_imp": 0.2976706909694411
+    },
+    {
+      "feature": "NACCAGE",
+      "shap_imp": 0.29319730585887444
+    },
+    {
+      "feature": "NACCAGEB",
+      "shap_imp": 0.2758880339151804
+    },
+    {
+      "feature": "VISITYR",
+      "shap_imp": 0.2134410668359521
+    },
+    {
+      "feature": "EVENTS",
+      "shap_imp": 0.1974101945608025
+    },
+    {
+      "feature": "INDEPEND",
+      "shap_imp": 0.18689597011925985
+    },
+    {
+      "feature": "HYPERCHO",
+      "shap_imp": 0.1263093660130729
+    },
+    {
+      "feature": "SHOPPING",
+      "shap_imp": 0.11229290288866778
+    },
+    {
+      "feature": "BILLS",
+      "shap_imp": 0.10324189922426591
+    },
+    {
+      "feature": "INSEX",
+      "shap_imp": 0.09967826296174669
+    },
+    {
+      "feature": "MEALPREP",
+      "shap_imp": 0.08444513852394579
+    },
+    {
+      "feature": "BIRTHYR",
+      "shap_imp": 0.07965088923293533
+    },
+    {
+      "feature": "EDUC",
+      "shap_imp": 0.07742709655707833
+    },
+    {
+      "feature": "TAXES",
+      "shap_imp": 0.07632356770740187
+    },
+    {
+      "feature": "GAMES",
+      "shap_imp": 0.07589593024279542
+    },
+    {
+      "feature": "HYPERTEN",
+      "shap_imp": 0.07482937856024524
+    },
+    {
+      "feature": "STOVE",
+      "shap_imp": 0.07467604091943433
+    },
+    {
+      "feature": "REMDATES",
+      "shap_imp": 0.07426239385736888
+    },
+    {
+      "feature": "TRAVEL",
+      "shap_imp": 0.06510190850980443
+    },
+    {
+      "feature": "VISION",
+      "shap_imp": 0.060933407328746116
+    }
+  ],
+  "xai_methods": [
+    "SHAP",
+    "LIME",
+    "Native FI",
+    "PDP",
+    "ICE"
+  ],
+  "plots": 11,
+  "date": "2025-11-17T22:34:44.095821"
+}

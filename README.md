@@ -30,11 +30,14 @@ probabilities = predictor.predict_proba(new_data)
 
 ## 🎯 What is This Project?
 
-This is a competition-ready ML system designed for the ModelX dementia risk prediction hackathon. It handles the complete pipeline from data preprocessing to model training and runs in three modes:
+This is a **production-ready ML system** for dementia risk prediction achieving **94.34% ROC-AUC** using AutoML. The system handles the complete pipeline from raw data to trained models with explainability analysis.
 
-- **Full Auto** (default): System does everything automatically
-- **Guided Manual**: System shows what it's doing, you approve/learn
-- **Pure Manual**: Full control when competition requires it
+**Key Features:**
+- ✅ **Automated Pipeline**: One command runs everything
+- ✅ **High Performance**: 94.34% ROC-AUC with AutoGluon (42 models, 4-level stacking)
+- ✅ **Multiple Models**: Compare AutoML vs 8 traditional ML models
+- ✅ **Explainability**: SHAP, LIME, feature importance analysis
+- ✅ **Production Ready**: Complete documentation, checksums, deployment guides
 
 ## ⚡ Quick Start
 
@@ -42,45 +45,100 @@ This is a competition-ready ML system designed for the ModelX dementia risk pred
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd CompeteML
+git clone https://github.com/MalinduLokuge/ModelX-Project.git
+cd ModelX-Project
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 
-### Run Your First Pipeline
+### 🚀 Run Complete Pipeline (Recommended)
 
+**Option 1: Full Pipeline (Preprocessing + Training)**
 ```bash
-# Quick 5-minute test
-python main.py run --train data/train.csv --test data/test.csv --preset quick
-
-# Full 1-hour run (default)
-python main.py run --train data/train.csv --test data/test.csv
-
-# Competition mode (2 hours, best quality)
-python main.py run --train data/train.csv --test data/test.csv --preset competition
+# Run everything from scratch (~45 minutes)
+python run_complete_pipeline.py
 ```
 
-### Example with Titanic Dataset
-
+**Option 2: Quick Test (5 minutes)**
 ```bash
-# Download Titanic data (or use your own competition data)
-python main.py run \
-  --train data/raw/titanic_train.csv \
-  --test data/raw/titanic_test.csv \
-  --target Survived \
-  --id-col PassengerId
+# Fast validation run
+python run_complete_pipeline.py --quick-test
 ```
 
-That's it! The system will:
-1. ✓ Load and validate data
-2. ✓ Auto-detect problem type (classification/regression)
-3. ✓ Preprocess data (handle missing, encode, scale)
-4. ✓ Train models with AutoGluon
-5. ✓ Generate predictions
-6. ✓ Create submission file
-7. ✓ Save recipe showing what was done
+**Option 3: Skip Preprocessing (Training Only)**
+```bash
+# If data already preprocessed (~30 minutes)
+python run_complete_pipeline.py --skip-preprocessing
+```
+
+### 📊 Individual Components
+
+**If you want to run specific parts:**
+
+```bash
+# 1. Data Preprocessing Only
+python run_preprocessing_simple.py
+
+# 2. Train Manual Models Only (8 models)
+python train_manual_lowmem.py
+
+# 3. Train AutoML Model Only (42 models, 4-level stacking)
+python train_autogluon_optimized.py
+
+# 4. Generate Model Comparison Report
+python model_comparison_final.py
+
+# 5. Generate Explainability Analysis
+python generate_xai_analysis.py
+```
+
+### 🎯 What Each Script Does
+
+| Script | Time | Output | Description |
+|--------|------|--------|-------------|
+| `run_complete_pipeline.py` | 45 min | All models + reports | **Main entry point** - runs everything |
+| `run_preprocessing_simple.py` | 5 min | `data/train/`, `data/test/` | Data cleaning, splitting, balancing |
+| `train_manual_lowmem.py` | 10 min | `outputs/manual_models/` | 8 traditional ML models |
+| `train_autogluon_optimized.py` | 30 min | `outputs/models/autogluon_optimized/` | AutoML with 94.34% ROC-AUC |
+| `model_comparison_final.py` | 2 min | `model_comparison_results/` | Compare all models |
+| `generate_xai_analysis.py` | 5 min | `outputs/xai/` | Feature importance, SHAP, LIME |
+
+### ✅ Pipeline Output
+
+After running `run_complete_pipeline.py`, you'll get:
+
+```
+├── data/
+│   ├── train/              # Preprocessed training data
+│   │   ├── X_train_balanced.csv
+│   │   └── y_train_balanced.csv
+│   └── test/               # Preprocessed test data
+│       ├── X_test.csv
+│       └── y_test.csv
+│
+├── outputs/
+│   ├── manual_models/      # 8 traditional ML models
+│   │   ├── LightGBM_Tuned.pkl
+│   │   ├── XGBoost_Tuned.pkl
+│   │   └── model_comparison.csv
+│   ├── models/
+│   │   └── autogluon_optimized/  # Production AutoML model (94.34% ROC-AUC)
+│   └── xai/                # Explainability analysis
+│       ├── XAI_DOCUMENTATION.md
+│       └── *.png (visualizations)
+│
+├── model_comparison_results/  # Model comparison reports
+│   ├── roc_curves_test.png
+│   ├── confusion_matrices_test.png
+│   └── metrics_comparison_test.png
+│
+└── Documentation/
+    ├── MODEL_README.md              # Complete model documentation
+    ├── AUTOML_TRAINING_REPORT.md    # Training details
+    ├── USAGE_SNIPPETS.md            # Code examples
+    └── CHECKSUMS.md                 # Model verification
+```
 
 ## 📁 Project Structure
 

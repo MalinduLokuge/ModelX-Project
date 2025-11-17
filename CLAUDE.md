@@ -57,3 +57,42 @@ Use the data dictionary to find suitable non-medical features and explain your c
 Read the data dictionary and pick the non-medical features you will use.
 
 Build and compare more than one model (with preprocessing, feature engineering and hyperparameter tuning).
+- What Makes a Strong Report
+ Common Pitfalls to Avoid
+ Avoid These Mistakes
+ • Over-relying on accuracy alone (especially with imbalanced data)
+ • Not justifying preprocessing and feature engineering choices
+ • Ignoring model assumptions and limitations
+ • Lacking proper train-test separation (data leakage)
+ • Not documenting hyperparameter tuning process
+ • Presenting results without interpretation or context
+ • Poor code documentation and lack of version control
+ Visualization Best Practices
+ • Always label axes clearly with units
+ • Use appropriate chart types for your data
+ • Include legends when showing multiple series
+ • Add captions that explain what the visualization shows
+ • Use consistent color schemes throughout the report
+ • Ensure figures are high resolution and readable
+ • Reference figures in the text with explanations
+ Final Checklist
+ Before submission, verify:
+ ▫
+ ▫
+ ▫
+ ▫
+ ▫
+ All sections are complete with 
+substantive content
+ Every decision is justified keep these things in memory while making the report. i will give first set of instructions. Data Exploration and Process Flow
+ Dataset Overview
+ What to Write Here Provide a comprehensive description of your dataset:
+ • Number of samples/records: Total instances in the dataset
+ • Number of features/columns: Total variables available
+ • Problem type: Classification or Regression
+ • Target variable: What you’re trying to predict and its significance
+ • Data source: Where the data came from (if applicable)
+ Example structure:
+ The dataset contains [X] samples with [Y] features, addressing a 
+[classification/regression] problem. The target variable represents 
+[description], which is crucial for [application domain]. must write these in report

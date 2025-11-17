@@ -1,0 +1,129 @@
+{
+  "model": "AutoGluon_WeightedEnsemble_L4",
+  "auc": 0.9434,
+  "top_30_features": [
+    {
+      "feature": "VISITMO",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "VISITDAY",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "VISITYR",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "BIRTHMO",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "BIRTHYR",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "SEX",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "HISPANIC",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "HISPOR",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "RACE",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "RACESEC",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "RACETER",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "PRIMLANG",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "EDUC",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "MARISTAT",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "NACCLIVS",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "INDEPEND",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "RESIDENC",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "HANDED",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "NACCAGE",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "NACCAGEB",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "NACCNIHR",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "INBIRMO",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "INBIRYR",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "INSEX",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "INHISP",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "INHISPOR",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "INRACE",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "INRASEC",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "INRATER",
+      "importance": 0.008928571428571428
+    },
+    {
+      "feature": "INEDUC",
+      "importance": 0.008928571428571428
+    }
+  ],
+  "has_shap": false,
+  "plots_generated": 4,
+  "date": "2025-11-17T21:27:09.640264"
+}

@@ -1,0 +1,15 @@
+{
+  "selected_model": "AutoGluon WeightedEnsemble_L4",
+  "automl_auc": 0.9434,
+  "best_manual": "LightGBM_Tuned",
+  "manual_auc": 0.7980713641788549,
+  "improvement_pp": 14.532863582114508,
+  "test_samples": 29279,
+  "manual_metrics": {
+    "ROC-AUC": 0.7980713641788549,
+    "Accuracy": 0.7609207964752894,
+    "Precision": 0.645729537366548,
+    "Recall": 0.4201203982403334,
+    "F1": 0.5090475522513677
+  }
+}

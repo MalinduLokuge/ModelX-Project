@@ -1,0 +1,15 @@
+{
+  "num_leaves": 118,
+  "learning_rate": 0.07021241609365873,
+  "n_estimators": 300,
+  "feature_fraction": 0.940101850374288,
+  "bagging_fraction": 0.8885985829209233,
+  "bagging_freq": 6,
+  "min_child_samples": 37,
+  "lambda_l1": 0.36509477727193046,
+  "lambda_l2": 6.5995032440709265,
+  "max_depth": 17,
+  "random_state": 42,
+  "n_jobs": -1,
+  "verbose": -1
+}

@@ -1,12 +1,12 @@
-# CompeteML 🏆
+# ModelX-Project 🏆
 
-**Competition-Ready Automated ML System**
+**ML Model for ModelX Dementia Risk Prediction Competition**
 
-Win ML competitions fast with intelligent automation, transparent workflows, and full control when needed.
+An automated machine learning system built specifically for predicting dementia risk using non-medical features.
 
-## 🎯 What is CompeteML?
+## 🎯 What is This Project?
 
-CompeteML is an automated machine learning system designed specifically for competitions. It handles ANY dataset and runs in three modes:
+This is a competition-ready ML system designed for the ModelX dementia risk prediction hackathon. It handles the complete pipeline from data preprocessing to model training and runs in three modes:
 
 - **Full Auto** (default): System does everything automatically
 - **Guided Manual**: System shows what it's doing, you approve/learn
@@ -376,4 +376,4 @@ Contributions welcome! This is a learning project designed to help people win ML
 
 ---
 
-**Built for ML competitors who want to move fast and win.** 🏆
+**Built for the ModelX dementia risk prediction competition.** 🏆

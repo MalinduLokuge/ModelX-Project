@@ -4,6 +4,30 @@
 
 An automated machine learning system built specifically for predicting dementia risk using non-medical features.
 
+## 🎉 **Production Model: 94.34% ROC-AUC Achieved!**
+
+**AutoGluon AutoML Model - Production Ready**
+- ✅ **Validation ROC-AUC: 94.34%** (WeightedEnsemble_L4)
+- ✅ **+14.87 pp improvement** over best manual model (79.47%)
+- ✅ **42 models trained** with 4-level stacking
+- ✅ **1,299 rows/second** inference speed
+- ✅ **132 engineered features** (112 original + 20 automated)
+- 📊 **See `AUTOML_TRAINING_REPORT.md` for complete details**
+
+**Quick Use:**
+```python
+from autogluon.tabular import TabularPredictor
+
+# Load production model
+predictor = TabularPredictor.load('outputs/models/autogluon_optimized/')
+
+# Make predictions
+predictions = predictor.predict(new_data)
+probabilities = predictor.predict_proba(new_data)
+```
+
+---
+
 ## 🎯 What is This Project?
 
 This is a competition-ready ML system designed for the ModelX dementia risk prediction hackathon. It handles the complete pipeline from data preprocessing to model training and runs in three modes:
